@@ -16,6 +16,7 @@
     {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
     this will take care of caching and cache-busting automatically --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "built/custom.css"}}" />
 
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
     it should always be the last tag before the closing head tag --}}
@@ -111,6 +112,36 @@ $(document).ready(function () {
     // FitVids - Makes video embeds responsive
     $(".gh-content").fitVids();
 });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    const $dropdownButtons = $('.nav-dropdown');
+    const $mobileNavButton = $('.mobile-nav-button');
+    const $mobileSidebar = $('.mobile-nav-sidebar');
+
+    // Toggle mobile sidebar visibility
+    $mobileNavButton.on('click', function (e) {
+      e.stopPropagation();
+      $mobileSidebar.toggleClass('open');
+    });
+
+    // Toggle dropdowns
+    $dropdownButtons.on('click', function (e) {
+      e.stopPropagation(); // Prevent outside click handler
+
+      // Close all other dropdowns
+      $dropdownButtons.not(this).find('.dropdown-box').removeClass('show');
+
+      // Toggle this dropdown
+      $(this).find('.dropdown-box').toggleClass('show');
+    });
+
+    // Close all dropdowns when clicking outside
+    $(document).on('click', function () {
+      $dropdownButtons.find('.dropdown-box').removeClass('show');
+    });
+  });
 </script>
 
 {{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag --}}
