@@ -21,6 +21,7 @@
 ==============================*/
 .sobonix-head {
   display: none;
+  background-color: white !important;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -96,6 +97,13 @@
   gap: 48px;
   padding: 0 12px;
   color: black;
+}
+
+/*==============================
+=     Site Content             =
+==============================*/
+.sobonix-content {
+  margin-top: 80px;
 }
 
 /*==============================
