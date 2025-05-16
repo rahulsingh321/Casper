@@ -134,6 +134,7 @@
 
 .nav-simple {
   padding: 0 28px;
+  width: max-content !important;
 }
 
 .nav-simple a {
