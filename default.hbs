@@ -26,149 +26,14 @@
 <body class="{{body_class}} is-head-{{#match @custom.navigation_layout "Logo on cover"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Modern sans-serif"}} has-sans-body{{/match}}{{#if @custom.show_publication_cover}} has-cover{{/if}}">
 <div class="viewport">
 
-    <nav class="sobonix-nav">
-      <header class="sobonix-mobile-nav">
-        <div class="mobile-nav-head">
-          <a href="https://www.sobonix.com" class="block ">
-            <img class="site-logo sobonix-site-logo" src="https://www.sobonix.com/assets/shared/common/logo-a7e360ff4548d651e59c1ec8ffb31755c33002e77c8acf824864190b2c8783db.svg" height="44.3px" width="200px"  alt="Sobonix Blog">
-          </a>
-          <button class="mobile-nav-button">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M28.38 0H11.62C4.34 0 0 4.34 0 11.62V28.36C0 35.66 4.34 40 11.62 40H28.36C35.64 40 39.98 35.66 39.98 28.38V11.62C40 4.34 35.66 0 28.38 0ZM30 30.5H10C9.18 30.5 8.5 29.82 8.5 29C8.5 28.18 9.18 27.5 10 27.5H30C30.82 27.5 31.5 28.18 31.5 29C31.5 29.82 30.82 30.5 30 30.5ZM30 21.5H10C9.18 21.5 8.5 20.82 8.5 20C8.5 19.18 9.18 18.5 10 18.5H30C30.82 18.5 31.5 19.18 31.5 20C31.5 20.82 30.82 21.5 30 21.5ZM30 12.5H10C9.18 12.5 8.5 11.82 8.5 11C8.5 10.18 9.18 9.5 10 9.5H30C30.82 9.5 31.5 10.18 31.5 11C31.5 11.82 30.82 12.5 30 12.5Z" fill="#0F59C6" />
-            </svg>
-          </button>
-        </div>
-        <div class="mobile-nav-sidebar">
-          <div class="mobile-nav-container">
-              <button class="nav-dropdown">
-                  <p>Services</p>
-                  <svg class="dropdown-icon" height="44.3px" width="200px" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                  </svg>
-                  <ul class="dropdown-box">
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/web-development">Web Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/ecommerce-development">Ecommerce Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/custom-saas-development">Custom Saas Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/enterprise-software-development">Enterprise Software Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/ui-ux-design-frontend-development">UX/UI Design & Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/cloud-microservices-architecture">Cloud Microservices Development</a>
-                  </ul>
-              </button>
-              <button class="nav-dropdown">
-                  <p>Industries</p>
-                  <svg class="dropdown-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                  </svg>
-                  <ul class="dropdown-box">
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/ecommerce-online-retail">Ecommerce Online Retail</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/retail-tech-digital-commerce">Retail Tech & Digital Commerce</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/edtech-online-learning">Edtech Online Learning</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/healthcare-medtech">Healthcare Medtech</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/proptech-real-estate-solutions">Proptech Realestate Solutions</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/beauty-wellness-lifestyle">Beauty Wellness Lifestyle</a>
-                  </ul>
-              </button>
-              <button class="nav-simple">
-                  <a href="https://www.sobonix.com/case-studies">Case Studies</a>
-              </button>
-              <button class="nav-dropdown">
-                  <p>Company</p>
-                  <svg class="dropdown-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                  </svg>
-                  <ul class="dropdown-box">
-                    <a class="dropdown-link" href="https://www.sobonix.com/about-us">About Us</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/our-process">Our Process</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/career">Career</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/media-kit">Media Kit</a>
-                  </ul>
-              </button>
-              <button class="nav-simple">
-                  <a href="https://www.sobonix.com/blogs">Blogs</a>
-              </button>
-          </div>
-          <button class="contact-btn">
-              <svg class="phone-icon" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17.4797 14.0968C16.5199 13.2617 15.4587 12.5512 14.3211 11.982C13.3746 11.5273 13.0294 11.5367 12.3577 12.0196C11.8 12.4226 11.4395 12.7974 10.7972 12.6576C9.60009 12.1142 8.53158 11.3234 7.66199 10.3371C6.67474 9.4684 5.88411 8.39892 5.34289 7.2001C5.20667 6.55273 5.57773 6.19673 5.98049 5.63865C6.4631 4.96777 6.47719 4.62118 6.01807 3.6742C5.45202 2.5343 4.74164 1.47206 3.90445 0.513695C3.21635 -0.170102 3.06488 -0.0197142 2.68208 0.1154C2.29133 0.279424 1.91637 0.478811 1.56186 0.711079C0.98339 1.04192 0.515612 1.53654 0.217371 2.13272C-0.0491796 2.7096 -0.359176 3.77759 1.21547 6.5868C2.37719 8.73336 3.84864 10.697 5.58243 12.4143C7.29975 14.1481 9.26205 15.6202 11.4066 16.7838C14.2083 18.3594 15.2816 18.0492 15.8581 17.7825C16.4581 17.491 16.9565 17.0255 17.2883 16.4466C17.5205 16.0919 17.7197 15.7167 17.8837 15.3258C18.0187 14.9463 18.1737 14.7912 17.4797 14.0968Z" fill="white"></path>
-              </svg>
-              <a href="https://www.sobonix.com/contact-us" class="contact-link">Contact Us</a>
-          </button>
-        </div>
-      </header>
-      <header id="gh-head" class="gh-head sobonix-head outer{{#match @custom.header_style "Hidden"}} is-header-hidden{{/match}}">
-          <a href="https://www.sobonix.com"><img class="site-logo sobonix-site-logo" src="https://www.sobonix.com/assets/shared/common/logo-a7e360ff4548d651e59c1ec8ffb31755c33002e77c8acf824864190b2c8783db.svg" alt="Sobonix Blog"></a>
-          <div class="nav-container">
-              <button class="nav-dropdown">
-                  <p>Services</p>
-                  <svg class="dropdown-icon" height="44.3px" width="200px" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                  </svg>
-                  <ul class="dropdown-box">
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/web-development">Web Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/ecommerce-development">Ecommerce Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/custom-saas-development">Custom Saas Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/enterprise-software-development">Enterprise Software Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/ui-ux-design-frontend-development">UX/UI Design & Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/cloud-microservices-architecture">Cloud Microservices Development</a>
-                  </ul>
-              </button>
-              <button class="nav-dropdown">
-                  <p>Industries</p>
-                  <svg class="dropdown-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                  </svg>
-                  <ul class="dropdown-box">
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/ecommerce-online-retail">Ecommerce Online Retail</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/retail-tech-digital-commerce">Retail Tech & Digital Commerce</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/edtech-online-learning">Edtech Online Learning</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/healthcare-medtech">Healthcare Medtech</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/proptech-real-estate-solutions">Proptech Realestate Solutions</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/beauty-wellness-lifestyle">Beauty Wellness Lifestyle</a>
-                  </ul>
-              </button>
-              <button class="nav-simple">
-                  <a href="https://www.sobonix.com/case-studies">Case Studies</a>
-              </button>
-              <button class="nav-dropdown">
-                <p>Company</p>
-                <svg class="dropdown-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                </svg>
-                
-                <ul class="dropdown-box" style="left: 0%;">
-                  <a class="dropdown-link" href="https://www.sobonix.com/about-us">About Us</a>
-                  <a class="dropdown-link" href="https://www.sobonix.com/our-process">Our Process</a>
-                  <a class="dropdown-link" href="https://www.sobonix.com/career">Career</a>
-                  <a class="dropdown-link" href="https://www.sobonix.com/media-kit">Media Kit</a>
-                </ul>
-              </button>
-              <button class="nav-simple">
-                  <a href="https://www.sobonix.com/blogs">Blogs</a>
-              </button>
-          </div>
-          <button class="contact-btn">
-              <svg class="phone-icon" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17.4797 14.0968C16.5199 13.2617 15.4587 12.5512 14.3211 11.982C13.3746 11.5273 13.0294 11.5367 12.3577 12.0196C11.8 12.4226 11.4395 12.7974 10.7972 12.6576C9.60009 12.1142 8.53158 11.3234 7.66199 10.3371C6.67474 9.4684 5.88411 8.39892 5.34289 7.2001C5.20667 6.55273 5.57773 6.19673 5.98049 5.63865C6.4631 4.96777 6.47719 4.62118 6.01807 3.6742C5.45202 2.5343 4.74164 1.47206 3.90445 0.513695C3.21635 -0.170102 3.06488 -0.0197142 2.68208 0.1154C2.29133 0.279424 1.91637 0.478811 1.56186 0.711079C0.98339 1.04192 0.515612 1.53654 0.217371 2.13272C-0.0491796 2.7096 -0.359176 3.77759 1.21547 6.5868C2.37719 8.73336 3.84864 10.697 5.58243 12.4143C7.29975 14.1481 9.26205 15.6202 11.4066 16.7838C14.2083 18.3594 15.2816 18.0492 15.8581 17.7825C16.4581 17.491 16.9565 17.0255 17.2883 16.4466C17.5205 16.0919 17.7197 15.7167 17.8837 15.3258C18.0187 14.9463 18.1737 14.7912 17.4797 14.0968Z" fill="white"></path>
-              </svg>
-              <a href="https://www.sobonix.com/contact-us" class="contact-link">Contact Us</a>
-          </button>
-      </header>
-    </nav>
+    {{> "theme/header"}}
     <div class="site-content sobonix-content">
         {{!-- All other templates get inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
     </div>
 
     {{!-- The global footer at the very bottom of the screen --}}
-    <footer class="site-footer outer">
-        <div class="inner">
-            <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <nav class="site-footer-nav">
-                {{navigation type="secondary"}}
-            </nav>
-            <div class="gh-powered-by"><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
-        </div>
-    </footer>
+    {{> "theme/footer"}}
 
 </div>
 {{!-- /.viewport --}}
@@ -195,36 +60,7 @@ $(document).ready(function () {
 });
 </script>
 
-<script type="text/javascript">
-  $(document).ready(function () {
-    const $dropdownButtons = $('.nav-dropdown');
-    const $mobileNavButton = $('.mobile-nav-button');
-    const $mobileSidebar = $('.mobile-nav-sidebar');
-
-    // Toggle mobile sidebar visibility
-    $mobileNavButton.on('click', function (e) {
-      e.stopPropagation();
-      $mobileSidebar.toggleClass('open');
-    });
-
-    // Toggle dropdowns
-    $dropdownButtons.on('click', function (e) {
-      e.stopPropagation(); // Prevent outside click handler
-
-      // Close all other dropdowns
-      $dropdownButtons.not(this).find('.dropdown-box').removeClass('show');
-
-      // Toggle this dropdown
-      $(this).find('.dropdown-box').toggleClass('show');
-    });
-
-    // Close all dropdowns when clicking outside
-    $(document).on('click', function () {
-      $dropdownButtons.find('.dropdown-box').removeClass('show');
-    });
-  });
-</script>
-
+<script src="{{asset "built/custom.js"}}"></script>
 {{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag --}}
 {{ghost_foot}}
 

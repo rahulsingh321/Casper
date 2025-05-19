@@ -10,10 +10,13 @@
   height: 80px;
   background-color: #fff !important;
   font-weight: 500;
-  box-shadow:
-    var(--tw-ring-offset-shadow, 0 0 #0000),
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000),
-    var(--tw-shadow, 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1));
+    var(
+      --tw-shadow,
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -2px rgba(0, 0, 0, 0.1)
+    );
 }
 
 /*==============================
@@ -157,10 +160,13 @@
   font-size: 14px;
   padding: 8px 0;
   border-top: 4px solid rgb(15 89 198);
-  box-shadow:
-    var(--tw-ring-offset-shadow, 0 0 #0000),
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000),
-    var(--tw-shadow, 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1));
+    var(
+      --tw-shadow,
+      0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -4px rgba(0, 0, 0, 0.1)
+    );
   z-index: 10000;
   max-width: none;
 }
@@ -225,10 +231,182 @@
 }
 
 /*==============================
+=       Footer Styles            =
+==============================*/
+
+.footer {
+  background-color: white;
+  padding: 32px 0 0 0;
+  color: white;
+}
+
+.footer-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Footer Top Section */
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.footer-logo {
+  grid-column: span 8;
+}
+
+.footer-contact-panel {
+  grid-column: span 8;
+  background-image: url(../images/sobonix-assets/footer/footer-bg.svg);
+  padding: 16px 8px;
+  margin: 16px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% center;
+}
+
+.footer-contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 0;
+  padding-right: 16px;
+  gap: 24px;
+}
+
+.footer-contact-item {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  align-items: center;
+}
+
+.contact-icon {
+  height: 16px;
+  width: 16px;
+}
+
+/* Footer Links Section */
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 2fr;
+  gap: 16px;
+  margin-top: 16px;
+  color: #1a202c;
+}
+
+.footer-links-column {
+  grid-column: span 3;
+}
+
+.footer-links-column:last-child {
+  grid-column: span 2;
+}
+
+.footer-column-title {
+  color: #1a202c;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.footer-link {
+  margin: 4px 0;
+  font-size: 12px;
+  width: fit-content;
+  font-weight: 400;
+  color: #1a202c;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: rgb(15 89 198);
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  border-top: 1px solid #ccc;
+  justify-content: space-between;
+  color: #1a202c;
+  padding: 16px 0;
+  margin-top: 48px;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  color: #4c4c4c;
+  font-weight: 500;
+}
+
+.footer-social {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.social-icon {
+  height: 16.1px;
+  width: auto;
+}
+
+.facebook-icon {
+  height: 15.5px;
+}
+
+.behance-icon {
+  height: 11.7px;
+}
+
+.linkedin-icon {
+  height: 14.4px;
+}
+
+.twitter-icon {
+  height: 13.8px;
+}
+
+.upwork-icon {
+  height: 13.2px;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: #1a202c;
+}
+
+.legal-link {
+  color: #4c4c4c;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.legal-link:hover {
+  color: rgb(15 89 198);
+}
+
+/*==============================
 =     Responsive Breakpoints   =
 ==============================*/
 @media (min-width: 640px) {
   .sobonix-head {
+    max-width: 640px;
+  }
+  .footer-container {
     max-width: 640px;
   }
 }
@@ -236,6 +414,19 @@
 @media (min-width: 768px) {
   .sobonix-head {
     max-width: 768px;
+  }
+  .footer-container {
+    max-width: 768px;
+  }
+  .footer-link {
+    font-size: 16px;
+  }
+  .footer-contact-item {
+    font-size: 16px;
+  }
+  .contact-icon {
+    height: auto;
+    width: auto;
   }
 }
 
@@ -269,16 +460,82 @@
   .contact-btn {
     margin: 0;
   }
+  .footer-container {
+    max-width: 1024px;
+  }
+  .footer-links {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
+    margin-top: 32px;
+  }
+  .footer-legal {
+    font-size: 16px;
+  }
+  .social-icon {
+    height: 23.3px;
+  }
+
+  .facebook-icon {
+    height: 22.5px;
+  }
+
+  .behance-icon {
+    height: 17px;
+  }
+
+  .linkedin-icon {
+    height: 20.8px;
+  }
+
+  .twitter-icon {
+    height: 20px;
+  }
+
+  .upwork-icon {
+    height: 19.2px;
+  }
+  .footer-copyright {
+    font-size: 16px;
+  }
+  .footer-bottom {
+    flex-direction: row;
+  }
+  .footer-logo {
+    grid-column: span 2;
+  }
+  .footer-column-title {
+    font-size: 18px;
+  }
+  .footer-links-column {
+    grid-column: span 3;
+  }
+
+  .footer-links-column:last-child {
+    grid-column: span 2;
+  }
+  .footer-contact-wrapper {
+    padding-left: 64px;
+  }
+  .footer-contact-panel {
+    grid-column: span 6;
+    margin: 0;
+  }
 }
 
 @media (min-width: 1280px) {
   .sobonix-head {
     max-width: 1280px;
   }
+  .footer-container {
+    max-width: 1280px;
+  }
 }
 
 @media (min-width: 1536px) {
   .sobonix-head {
+    max-width: 1536px;
+  }
+  .footer-container {
     max-width: 1536px;
   }
 }
