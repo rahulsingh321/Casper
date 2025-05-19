@@ -260,7 +260,7 @@
 
 .footer-contact-panel {
   grid-column: span 8;
-  background-image: url(../images/sobonix-assets/footer/footer-bg.svg);
+  background-image: url(../images/theme/footer-bg.svg);
   padding: 16px 8px;
   margin: 16px 0;
   background-repeat: no-repeat;
