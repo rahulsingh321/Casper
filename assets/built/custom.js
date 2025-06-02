@@ -1,27 +1,28 @@
-$(document).ready(function () {
+$(function () {
   const $dropdownButtons = $(".nav-dropdown");
   const $mobileNavButton = $(".mobile-nav-button");
-  const $mobileSidebar = $(".mobile-nav-sidebar");
+  const $mobileSidebar   = $(".mobile-nav-sidebar");
 
-  // Toggle mobile sidebar visibility
+  // Toggle mobile sidebar
   $mobileNavButton.on("click", function (e) {
     e.stopPropagation();
     $mobileSidebar.toggleClass("open");
   });
 
-  // Toggle dropdowns
+  // Handle dropdown toggle
   $dropdownButtons.on("click", function (e) {
-    e.stopPropagation(); // Prevent outside click handler
+    e.stopPropagation();
+    const $currentDropdown = $(this).find(".dropdown-box");
 
     // Close all other dropdowns
-    $dropdownButtons.not(this).find(".dropdown-box").removeClass("show");
+    $(".dropdown-box").not($currentDropdown).removeClass("show");
 
-    // Toggle this dropdown
-    $(this).find(".dropdown-box").toggleClass("show");
+    // Toggle current dropdown
+    $currentDropdown.toggleClass("show");
   });
 
-  // Close all dropdowns when clicking outside
+  // Close dropdowns on outside click
   $(document).on("click", function () {
-    $dropdownButtons.find(".dropdown-box").removeClass("show");
+    $(".dropdown-box").removeClass("show");
   });
 });
