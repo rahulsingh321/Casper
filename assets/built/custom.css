@@ -10,8 +10,7 @@
   height: 80px;
   background-color: #fff !important;
   font-weight: 500;
-  box-shadow:
-    var(--tw-ring-offset-shadow, 0 0 #0000),
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000),
     var(--tw-shadow,
       0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -157,8 +156,7 @@
   font-size: 14px;
   padding: 8px 0;
   border-top: 4px solid rgb(15 89 198);
-  box-shadow:
-    var(--tw-ring-offset-shadow, 0 0 #0000),
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000),
     var(--tw-shadow,
       0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -393,6 +391,9 @@
   .footer-container {
     max-width: 640px;
   }
+  .footer-container {
+    max-width: 640px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -506,10 +507,16 @@
   .footer-container {
     max-width: 1280px;
   }
+  .footer-container {
+    max-width: 1280px;
+  }
 }
 
 @media (min-width: 1536px) {
   .sobonix-head,
+  .footer-container {
+    max-width: 1536px;
+  }
   .footer-container {
     max-width: 1536px;
   }
