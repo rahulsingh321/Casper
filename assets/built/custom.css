@@ -1,5 +1,5 @@
 /*==============================
-=        Navigation Base       =
+=       Navigation Base        =
 ==============================*/
 .sobonix-nav {
   position: fixed;
@@ -10,39 +10,48 @@
   height: 80px;
   background-color: #fff !important;
   font-weight: 500;
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+  box-shadow:
+    var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000),
-    var(
-      --tw-shadow,
+    var(--tw-shadow,
       0 4px 6px -1px rgba(0, 0, 0, 0.1),
       0 2px 4px -2px rgba(0, 0, 0, 0.1)
     );
 }
 
 /*==============================
-=       Desktop Header         =
+=      Header Styles           =
 ==============================*/
-.sobonix-head {
-  display: none;
-  background-color: white !important;
-  justify-content: space-between;
-  align-items: center;
+.sobonix-head,
+.sobonix-mobile-nav {
   width: 100%;
   height: 80px !important;
-  margin: 0 auto;
   padding: 16px;
+  background-color: #fff !important;
 }
 
-/*==============================
-=        Mobile Header         =
-==============================*/
+.sobonix-head {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
 .sobonix-mobile-nav {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 100%;
-  height: 80px !important;
-  padding: 16px;
+}
+
+/*==============================
+=      Navigation Containers   =
+==============================*/
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 0 12px;
+  color: black;
 }
 
 .mobile-nav-button {
@@ -62,7 +71,7 @@
   left: 0;
   width: 100%;
   background-color: #fff;
-  padding: 0 0 16px;
+  padding-bottom: 16px;
   z-index: 1000;
   flex-direction: column;
   gap: 1rem;
@@ -82,7 +91,7 @@
 }
 
 /*==============================
-=        Logo Styling          =
+=      Logo Styling            =
 ==============================*/
 .sobonix-site-logo {
   width: 200px !important;
@@ -92,18 +101,7 @@
 }
 
 /*==============================
-=     Navigation Container     =
-==============================*/
-.nav-container {
-  display: flex;
-  align-items: center;
-  gap: 48px;
-  padding: 0 12px;
-  color: black;
-}
-
-/*==============================
-=     Site Content             =
+=     Content Wrapper          =
 ==============================*/
 .sobonix-content {
   margin-top: 80px;
@@ -136,7 +134,6 @@
 }
 
 .nav-simple {
-  padding: 0 28px;
   width: max-content !important;
 }
 
@@ -147,7 +144,7 @@
 }
 
 /*==============================
-=        Dropdown Menu         =
+=      Dropdown Styles         =
 ==============================*/
 .dropdown-box {
   display: none;
@@ -160,10 +157,10 @@
   font-size: 14px;
   padding: 8px 0;
   border-top: 4px solid rgb(15 89 198);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+  box-shadow:
+    var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000),
-    var(
-      --tw-shadow,
+    var(--tw-shadow,
       0 10px 15px -3px rgba(0, 0, 0, 0.1),
       0 4px 6px -4px rgba(0, 0, 0, 0.1)
     );
@@ -194,7 +191,7 @@
 }
 
 /*==============================
-=       Contact Button         =
+=      Contact Button          =
 ==============================*/
 .contact-btn {
   display: flex;
@@ -218,8 +215,15 @@
 }
 
 /*==============================
-=       Icon Styles            =
+=        Icons                 =
 ==============================*/
+.dropdown-icon,
+.phone-icon,
+.contact-icon {
+  width: 16px;
+  height: 16px;
+}
+
 .dropdown-icon {
   width: 12px;
   height: 12px;
@@ -231,12 +235,11 @@
 }
 
 /*==============================
-=       Footer Styles            =
+=         Footer               =
 ==============================*/
-
 .footer {
   background-color: white;
-  padding: 32px 0 0 0;
+  padding-top: 32px;
   color: white;
 }
 
@@ -246,7 +249,7 @@
   padding: 16px;
 }
 
-/* Footer Top Section */
+/* Footer Top */
 .footer-top {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -260,36 +263,27 @@
 
 .footer-contact-panel {
   grid-column: span 8;
-  background-image: url(../images/theme/footer-bg.svg);
+  background: url(../images/theme/footer-bg.svg) no-repeat center / cover;
   padding: 16px 8px;
   margin: 16px 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% center;
 }
 
 .footer-contact-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-left: 0;
-  padding-right: 16px;
   gap: 24px;
+  padding-right: 16px;
 }
 
 .footer-contact-item {
   display: flex;
   gap: 16px;
-  font-size: 12px;
   align-items: center;
+  font-size: 12px;
 }
 
-.contact-icon {
-  height: 16px;
-  width: 16px;
-}
-
-/* Footer Links Section */
+/* Footer Links */
 .footer-links {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -308,9 +302,9 @@
 }
 
 .footer-column-title {
-  color: #1a202c;
   font-weight: bold;
   font-size: 16px;
+  color: #1a202c;
 }
 
 .footer-links-list {
@@ -321,34 +315,28 @@
 }
 
 .footer-link {
-  margin: 4px 0;
   font-size: 12px;
-  width: fit-content;
   font-weight: 400;
   color: #1a202c;
   text-decoration: none;
+  margin: 4px 0;
+  width: fit-content;
 }
 
 .footer-link:hover {
   color: rgb(15 89 198);
 }
 
-/* Footer Bottom Section */
+/* Footer Bottom */
 .footer-bottom {
   display: flex;
   flex-direction: column;
   gap: 32px;
   border-top: 1px solid #ccc;
-  justify-content: space-between;
-  color: #1a202c;
   padding: 16px 0;
   margin-top: 48px;
-}
-
-.footer-copyright {
-  font-size: 12px;
-  color: #4c4c4c;
-  font-weight: 500;
+  color: #1a202c;
+  justify-content: space-between;
 }
 
 .footer-social {
@@ -357,29 +345,10 @@
   align-items: center;
 }
 
-.social-icon {
-  height: 16.1px;
-  width: auto;
-}
-
-.facebook-icon {
-  height: 15.5px;
-}
-
-.behance-icon {
-  height: 11.7px;
-}
-
-.linkedin-icon {
-  height: 14.4px;
-}
-
-.twitter-icon {
-  height: 13.8px;
-}
-
-.upwork-icon {
-  height: 13.2px;
+.footer-copyright {
+  font-size: 12px;
+  font-weight: 500;
+  color: #4c4c4c;
 }
 
 .footer-legal {
@@ -390,40 +359,53 @@
 }
 
 .legal-link {
+  font-weight: 500;
   color: #4c4c4c;
   text-decoration: none;
-  font-weight: 500;
 }
 
 .legal-link:hover {
   color: rgb(15 89 198);
 }
 
+/* Social Icons */
+.social-icon,
+.facebook-icon,
+.behance-icon,
+.linkedin-icon,
+.twitter-icon,
+.upwork-icon {
+  height: auto;
+  width: auto;
+}
+
+.facebook-icon { height: 15.5px; }
+.behance-icon { height: 11.7px; }
+.linkedin-icon { height: 14.4px; }
+.twitter-icon { height: 13.8px; }
+.upwork-icon { height: 13.2px; }
+
 /*==============================
 =     Responsive Breakpoints   =
 ==============================*/
 @media (min-width: 640px) {
-  .sobonix-head {
-    max-width: 640px;
-  }
+  .sobonix-head,
   .footer-container {
     max-width: 640px;
   }
 }
 
 @media (min-width: 768px) {
-  .sobonix-head {
-    max-width: 768px;
-  }
+  .sobonix-head,
   .footer-container {
     max-width: 768px;
   }
-  .footer-link {
-    font-size: 16px;
-  }
+
+  .footer-link,
   .footer-contact-item {
     font-size: 16px;
   }
+
   .contact-icon {
     height: auto;
     width: auto;
@@ -440,72 +422,41 @@
     display: none;
   }
 
-  .nav-dropdown {
-    justify-content: flex-start;
-    width: auto;
-    padding: 0;
-  }
-
+  .nav-dropdown,
   .nav-simple {
     padding: 0;
+    width: auto;
+  }
+
+  .nav-dropdown {
+    justify-content: flex-start;
   }
 
   .dropdown-box {
-    width: auto;
     top: 200%;
     left: -50%;
     display: none;
+    width: auto;
   }
 
   .contact-btn {
     margin: 0;
   }
+
   .footer-container {
     max-width: 1024px;
   }
+
   .footer-links {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 1fr;
     margin-top: 32px;
   }
-  .footer-legal {
-    font-size: 16px;
-  }
-  .social-icon {
-    height: 23.3px;
-  }
 
-  .facebook-icon {
-    height: 22.5px;
-  }
-
-  .behance-icon {
-    height: 17px;
-  }
-
-  .linkedin-icon {
-    height: 20.8px;
-  }
-
-  .twitter-icon {
-    height: 20px;
-  }
-
-  .upwork-icon {
-    height: 19.2px;
-  }
-  .footer-copyright {
-    font-size: 16px;
-  }
-  .footer-bottom {
-    flex-direction: row;
-  }
   .footer-logo {
     grid-column: span 2;
   }
-  .footer-column-title {
-    font-size: 18px;
-  }
+
   .footer-links-column {
     grid-column: span 3;
   }
@@ -513,28 +464,52 @@
   .footer-links-column:last-child {
     grid-column: span 2;
   }
+
   .footer-contact-wrapper {
     padding-left: 64px;
   }
+
   .footer-contact-panel {
     grid-column: span 6;
     margin: 0;
   }
+
+  .footer-column-title {
+    font-size: 18px;
+  }
+
+  .footer-legal {
+    font-size: 16px;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+  }
+
+  .footer-copyright {
+    font-size: 16px;
+  }
+
+  .social-icon {
+    height: 23.3px;
+  }
+
+  .facebook-icon { height: 22.5px; }
+  .behance-icon { height: 17px; }
+  .linkedin-icon { height: 20.8px; }
+  .twitter-icon { height: 20px; }
+  .upwork-icon { height: 19.2px; }
 }
 
 @media (min-width: 1280px) {
-  .sobonix-head {
-    max-width: 1280px;
-  }
+  .sobonix-head,
   .footer-container {
     max-width: 1280px;
   }
 }
 
 @media (min-width: 1536px) {
-  .sobonix-head {
-    max-width: 1536px;
-  }
+  .sobonix-head,
   .footer-container {
     max-width: 1536px;
   }
