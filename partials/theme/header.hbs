@@ -1,128 +1,167 @@
-<nav class="sobonix-nav">
-      <header class="sobonix-mobile-nav">
-        <div class="mobile-nav-head">
-          <a href="https://www.sobonix.com" class="block ">
-            <img class="site-logo sobonix-site-logo" src="{{asset "images/theme/logo.svg"}}" height="44.3px" width="200px"  alt="Sobonix Blog">
-          </a>
-          <button class="mobile-nav-button">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M28.38 0H11.62C4.34 0 0 4.34 0 11.62V28.36C0 35.66 4.34 40 11.62 40H28.36C35.64 40 39.98 35.66 39.98 28.38V11.62C40 4.34 35.66 0 28.38 0ZM30 30.5H10C9.18 30.5 8.5 29.82 8.5 29C8.5 28.18 9.18 27.5 10 27.5H30C30.82 27.5 31.5 28.18 31.5 29C31.5 29.82 30.82 30.5 30 30.5ZM30 21.5H10C9.18 21.5 8.5 20.82 8.5 20C8.5 19.18 9.18 18.5 10 18.5H30C30.82 18.5 31.5 19.18 31.5 20C31.5 20.82 30.82 21.5 30 21.5ZM30 12.5H10C9.18 12.5 8.5 11.82 8.5 11C8.5 10.18 9.18 9.5 10 9.5H30C30.82 9.5 31.5 10.18 31.5 11C31.5 11.82 30.82 12.5 30 12.5Z" fill="#0F59C6" />
-            </svg>
-          </button>
-        </div>
-        <div class="mobile-nav-sidebar">
-          <div class="mobile-nav-container">
-              <button class="nav-dropdown">
-                  <p>Services</p>
-                  <svg class="dropdown-icon" height="44.3px" width="200px" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                  </svg>
-                  <ul class="dropdown-box">
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/custom-web-development-company">Custom Web Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/artificial-intelligence-company">Artificial Intelligence Solutions</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/saas-development-company">Scalable SaaS Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/enterprise-software-development-company">Enterprise Software Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/ui-ux-design-frontend-development-company">UX/UI Design & Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/cloud-microservices-architecture-company">Cloud Microservices Development</a>
-                  </ul>
-              </button>
-              <button class="nav-dropdown">
-                  <p>Industries</p>
-                  <svg class="dropdown-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                  </svg>
-                  <ul class="dropdown-box">
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/ecommerce-online-retail">Ecommerce Online Retail</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/edtech-online-learning">Edtech Online Learning</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/healthcare-medtech">Healthcare Medtech</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/proptech-real-estate-solutions">Proptech Realestate Solutions</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/beauty-wellness-lifestyle">Beauty Wellness Lifestyle</a>
-                  </ul>
-              </button>
-              <button class="nav-simple">
-                  <a href="https://www.sobonix.com/case-studies">Case Studies</a>
-              </button>
-              
-              <button class="nav-dropdown">
-                  <p>Company</p>
-                  <svg class="dropdown-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                  </svg>
-                  <ul class="dropdown-box">
-                    <a class="dropdown-link" href="https://www.sobonix.com/about-us">About Us</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/our-process">Our Process</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/career">Career</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/media-kit">Media Kit</a>
-                  </ul>
-              </button>
-              <button class="nav-simple">
-                  <a href="https://www.sobonix.com/blog">Blogs</a>
-              </button>
+<div data-navbar-root class="fixed left-0 top-0 lg:border lg:border-solid lg:border-default-white/60 w-dvw bg-[#E0E8FF] lg:-translate-x-1/2 lg:left-1/2 lg:top-10 lg:w-[90dvw] lg:bg-[rgba(224,232,255,0.6)] py-3 pl-6 pr-3 z-200 lg:rounded-full lg:backdrop-blur-xs flex justify-between gap-2 items-center">
+  <a href="https://www.sobonix.com/" aria-label="Home">
+    <img src="{{asset 'images/theme/logo.svg'}}" alt="sobonix logo" width="155" height="40" loading="eager" />
+  </a>
+
+  <label class="burger lg:hidden" for="burger">
+    <input type="checkbox" id="burger" />
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <nav class="overflow-y-auto lg:overflow-y-visible pt-6 lg:pt-0 items-stretch absolute lg:static top-full -translate-x-1/2 opacity-0 !translate-x-full lg:!translate-none lg:opacity-100 transition ease-in-out duration-500 left-1/2 h-dvh w-dvw lg:h-auto lg:w-auto bg-default-light-blue lg:bg-transparent flex flex-col lg:!flex lg:flex-row lg:items-center lg:gap-10">
+    <div class="relative transition duration-200 ease-in-out">
+      <button type="button" class="nav-el p-4 lg:p-0 hover:cursor-pointer flex items-center justify-between w-full lg:w-auto gap-4 text-20m text-default-blue lg:text-default-black hover:text-default-blue transition duration-200 ease-in-out">
+        Services
+        <svg xmlns="http://www.w3.org/2000/svg" class="material-symbols-rounded icon-chevron transition duration-200 !text-[26px] ease-in-out" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.5326 6.52927L8.53255 11.5293C8.46287 11.5992 8.38008 11.6547 8.28892 11.6925C8.19775 11.7304 8.10001 11.7499 8.0013 11.7499C7.90259 11.7499 7.80485 11.7304 7.71369 11.6925C7.62252 11.6547 7.53973 11.5992 7.47005 11.5293L2.47005 6.52927C2.32915 6.38837 2.25 6.19728 2.25 5.99802C2.25 5.79876 2.32915 5.60767 2.47005 5.46677C2.61095 5.32587 2.80204 5.24672 3.0013 5.24672C3.20056 5.24672 3.39165 5.32587 3.53255 5.46677L8.00193 9.93614L12.4713 5.46615C12.6122 5.32525 12.8033 5.24609 13.0026 5.24609C13.2018 5.24609 13.3929 5.32525 13.5338 5.46615C13.6747 5.60704 13.7539 5.79814 13.7539 5.9974C13.7539 6.19665 13.6747 6.38775 13.5338 6.52865L13.5326 6.52927Z" fill="#1C2024"/></svg>
+      </button>
+      <div class="overflow-y-hidden w-[95%] lg:w-auto mx-auto max-h-[0px] lg:max-h-none transition ease-in-out duration-300 lg:!block lg:absolute top-[56px] lg:-translate-x-1/2 lg:left-1/2 lg:p-4 bg-default-white rounded-lg z-10 shadow-[0_1px_2px_rgba(0,0,0,0.24),0_1px_3px_rgba(0,0,0,0.12)] opacity-0 pointer-events-none scale-95 transition-all duration-200 ease-in-out">
+        <a href="https://www.sobonix.com/services/custom-web-development-company" class="nav-link group">
+          <div class="whitespace-nowrap w-max flex items-center gap-2">
+            <span class="w-7 h-7 rounded-[3px] bg-default-light-blue flex items-center justify-center"><img src="{{asset 'images/theme/icons/laptop.svg'}}" alt="Web development services icon" width="17.5" height="13.1" loading="lazy" /></span>
+            <span>Custom Web Development</span>
           </div>
-          <button class="contact-btn">
-              <svg class="phone-icon" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17.4797 14.0968C16.5199 13.2617 15.4587 12.5512 14.3211 11.982C13.3746 11.5273 13.0294 11.5367 12.3577 12.0196C11.8 12.4226 11.4395 12.7974 10.7972 12.6576C9.60009 12.1142 8.53158 11.3234 7.66199 10.3371C6.67474 9.4684 5.88411 8.39892 5.34289 7.2001C5.20667 6.55273 5.57773 6.19673 5.98049 5.63865C6.4631 4.96777 6.47719 4.62118 6.01807 3.6742C5.45202 2.5343 4.74164 1.47206 3.90445 0.513695C3.21635 -0.170102 3.06488 -0.0197142 2.68208 0.1154C2.29133 0.279424 1.91637 0.478811 1.56186 0.711079C0.98339 1.04192 0.515612 1.53654 0.217371 2.13272C-0.0491796 2.7096 -0.359176 3.77759 1.21547 6.5868C2.37719 8.73336 3.84864 10.697 5.58243 12.4143C7.29975 14.1481 9.26205 15.6202 11.4066 16.7838C14.2083 18.3594 15.2816 18.0492 15.8581 17.7825C16.4581 17.491 16.9565 17.0255 17.2883 16.4466C17.5205 16.0919 17.7197 15.7167 17.8837 15.3258C18.0187 14.9463 18.1737 14.7912 17.4797 14.0968Z" fill="white"></path>
-              </svg>
-              <a href="https://www.sobonix.com/contact-us" class="contact-link">Contact Us</a>
-          </button>
-        </div>
-      </header>
-      <header id="gh-head" class="gh-head sobonix-head outer{{#match @custom.header_style "Hidden"}} is-header-hidden{{/match}}">
-          <a href="https://www.sobonix.com"><img class="site-logo sobonix-site-logo" src="{{asset "images/theme/logo.svg"}}" alt="Sobonix Blog"></a>
-          <div class="nav-container">
-              <button class="nav-dropdown">
-                  <p>Services</p>
-                  <svg class="dropdown-icon" height="44.3px" width="200px" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                  </svg>
-                  <ul class="dropdown-box">
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/custom-web-development-company">Custom Web Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/artificial-intelligence-company">Artificial Intelligence Solutions</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/saas-development-company">Scalable SaaS Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/enterprise-software-development-company">Enterprise Software Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/ui-ux-design-frontend-development-company">UX/UI Design & Development</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/services/cloud-microservices-architecture-company">Cloud Microservices Development</a>
-                  </ul>
-              </button>
-              <button class="nav-dropdown">
-                  <p>Industries</p>
-                  <svg class="dropdown-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                  </svg>
-                  <ul class="dropdown-box">
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/ecommerce-online-retail">Ecommerce Online Retail</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/edtech-online-learning">Edtech Online Learning</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/healthcare-medtech">Healthcare Medtech</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/proptech-real-estate-solutions">Proptech Realestate Solutions</a>
-                    <a class="dropdown-link" href="https://www.sobonix.com/industries/beauty-wellness-lifestyle">Beauty Wellness Lifestyle</a>
-                  </ul>
-              </button>
-              <button class="nav-simple">
-                  <a href="https://www.sobonix.com/case-studies">Case Studies</a>
-              </button>
-              
-              <button class="nav-dropdown">
-                <p>Company</p>
-                <svg class="dropdown-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                </svg>
-                
-                <ul class="dropdown-box" style="left: 0%;">
-                  <a class="dropdown-link" href="https://www.sobonix.com/about-us">About Us</a>
-                  <a class="dropdown-link" href="https://www.sobonix.com/our-process">Our Process</a>
-                  <a class="dropdown-link" href="https://www.sobonix.com/career">Career</a>
-                  <a class="dropdown-link" href="https://www.sobonix.com/media-kit">Media Kit</a>
-                </ul>
-              </button>
-              <button class="nav-simple">
-                  <a href="https://www.sobonix.com/blog">Blogs</a>
-              </button>
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon icon-outward" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M11.2503 0.625V8.75C11.2503 8.91576 11.1845 9.07473 11.0673 9.19194C10.9501 9.30915 10.7911 9.375 10.6253 9.375C10.4596 9.375 10.3006 9.30915 10.1834 9.19194C10.0662 9.07473 10.0003 8.91576 10.0003 8.75V2.13359L1.06754 11.0672C0.95026 11.1845 0.7912 11.2503 0.625347 11.2503C0.459495 11.2503 0.300435 11.1845 0.18316 11.0672C0.0658846 10.9499 0 10.7909 0 10.625C0 10.4591 0.0658846 10.3001 0.18316 10.1828L9.11675 1.25H2.50035C2.33459 1.25 2.17562 1.18415 2.05841 1.06694C1.9412 0.949731 1.87535 0.79076 1.87535 0.625C1.87535 0.45924 1.9412 0.300269 2.05841 0.183058C2.17562 0.0658481 2.33459 0 2.50035 0H10.6253C10.7911 0 10.9501 0.0658481 11.0673 0.183058C11.1845 0.300269 11.2503 0.45924 11.2503 0.625Z" fill="#0F59C6"/></svg>
+        </a>
+        <a href="https://www.sobonix.com/services/artificial-intelligence-company" class="nav-link group">
+          <div class="whitespace-nowrap w-max flex items-center gap-2">
+            <span class="w-7 h-7 rounded-[3px] bg-default-light-blue flex items-center justify-center"><img src="{{asset 'images/theme/icons/brain.svg'}}" alt="Artificial intelligence solutions icon" width="18.75" height="15.6" loading="lazy" /></span>
+            <span>Artificial Intelligence Solutions</span>
           </div>
-          <button class="contact-btn">
-              <svg class="phone-icon" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17.4797 14.0968C16.5199 13.2617 15.4587 12.5512 14.3211 11.982C13.3746 11.5273 13.0294 11.5367 12.3577 12.0196C11.8 12.4226 11.4395 12.7974 10.7972 12.6576C9.60009 12.1142 8.53158 11.3234 7.66199 10.3371C6.67474 9.4684 5.88411 8.39892 5.34289 7.2001C5.20667 6.55273 5.57773 6.19673 5.98049 5.63865C6.4631 4.96777 6.47719 4.62118 6.01807 3.6742C5.45202 2.5343 4.74164 1.47206 3.90445 0.513695C3.21635 -0.170102 3.06488 -0.0197142 2.68208 0.1154C2.29133 0.279424 1.91637 0.478811 1.56186 0.711079C0.98339 1.04192 0.515612 1.53654 0.217371 2.13272C-0.0491796 2.7096 -0.359176 3.77759 1.21547 6.5868C2.37719 8.73336 3.84864 10.697 5.58243 12.4143C7.29975 14.1481 9.26205 15.6202 11.4066 16.7838C14.2083 18.3594 15.2816 18.0492 15.8581 17.7825C16.4581 17.491 16.9565 17.0255 17.2883 16.4466C17.5205 16.0919 17.7197 15.7167 17.8837 15.3258C18.0187 14.9463 18.1737 14.7912 17.4797 14.0968Z" fill="white"></path>
-              </svg>
-              <a href="https://www.sobonix.com/contact-us" class="contact-link">Contact Us</a>
-          </button>
-      </header>
-    </nav>
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon icon-outward" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M11.2503 0.625V8.75C11.2503 8.91576 11.1845 9.07473 11.0673 9.19194C10.9501 9.30915 10.7911 9.375 10.6253 9.375C10.4596 9.375 10.3006 9.30915 10.1834 9.19194C10.0662 9.07473 10.0003 8.91576 10.0003 8.75V2.13359L1.06754 11.0672C0.95026 11.1845 0.7912 11.2503 0.625347 11.2503C0.459495 11.2503 0.300435 11.1845 0.18316 11.0672C0.0658846 10.9499 0 10.7909 0 10.625C0 10.4591 0.0658846 10.3001 0.18316 10.1828L9.11675 1.25H2.50035C2.33459 1.25 2.17562 1.18415 2.05841 1.06694C1.9412 0.949731 1.87535 0.79076 1.87535 0.625C1.87535 0.45924 1.9412 0.300269 2.05841 0.183058C2.17562 0.0658481 2.33459 0 2.50035 0H10.6253C10.7911 0 10.9501 0.0658481 11.0673 0.183058C11.1845 0.300269 11.2503 0.45924 11.2503 0.625Z" fill="#0F59C6"/></svg>
+        </a>
+        <a href="https://www.sobonix.com/services/saas-development-company" class="nav-link group">
+          <div class="whitespace-nowrap w-max flex items-center gap-2">
+            <span class="w-7 h-7 rounded-[3px] bg-default-light-blue flex items-center justify-center"><img src="{{asset 'images/theme/icons/tabs.svg'}}" alt="Scalable SaaS platforms icon" width="16.25" height="13.75" loading="lazy" /></span>
+            <span>Scalable SaaS Development</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon icon-outward" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M11.2503 0.625V8.75C11.2503 8.91576 11.1845 9.07473 11.0673 9.19194C10.9501 9.30915 10.7911 9.375 10.6253 9.375C10.4596 9.375 10.3006 9.30915 10.1834 9.19194C10.0662 9.07473 10.0003 8.91576 10.0003 8.75V2.13359L1.06754 11.0672C0.95026 11.1845 0.7912 11.2503 0.625347 11.2503C0.459495 11.2503 0.300435 11.1845 0.18316 11.0672C0.0658846 10.9499 0 10.7909 0 10.625C0 10.4591 0.0658846 10.3001 0.18316 10.1828L9.11675 1.25H2.50035C2.33459 1.25 2.17562 1.18415 2.05841 1.06694C1.9412 0.949731 1.87535 0.79076 1.87535 0.625C1.87535 0.45924 1.9412 0.300269 2.05841 0.183058C2.17562 0.0658481 2.33459 0 2.50035 0H10.6253C10.7911 0 10.9501 0.0658481 11.0673 0.183058C11.1845 0.300269 11.2503 0.45924 11.2503 0.625Z" fill="#0F59C6"/></svg>
+        </a>
+        <a href="https://www.sobonix.com/services/enterprise-software-development-company" class="nav-link group">
+          <div class="whitespace-nowrap w-max flex items-center gap-2">
+            <span class="w-7 h-7 rounded-[3px] bg-default-light-blue flex items-center justify-center"><img src="{{asset 'images/theme/icons/code.svg'}}" alt="Enterprise software development icon" width="18.75" height="15" loading="lazy" /></span>
+            <span>Enterprise Software Development</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon icon-outward" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M11.2503 0.625V8.75C11.2503 8.91576 11.1845 9.07473 11.0673 9.19194C10.9501 9.30915 10.7911 9.375 10.6253 9.375C10.4596 9.375 10.3006 9.30915 10.1834 9.19194C10.0662 9.07473 10.0003 8.91576 10.0003 8.75V2.13359L1.06754 11.0672C0.95026 11.1845 0.7912 11.2503 0.625347 11.2503C0.459495 11.2503 0.300435 11.1845 0.18316 11.0672C0.0658846 10.9499 0 10.7909 0 10.625C0 10.4591 0.0658846 10.3001 0.18316 10.1828L9.11675 1.25H2.50035C2.33459 1.25 2.17562 1.18415 2.05841 1.06694C1.9412 0.949731 1.87535 0.79076 1.87535 0.625C1.87535 0.45924 1.9412 0.300269 2.05841 0.183058C2.17562 0.0658481 2.33459 0 2.50035 0H10.6253C10.7911 0 10.9501 0.0658481 11.0673 0.183058C11.1845 0.300269 11.2503 0.45924 11.2503 0.625Z" fill="#0F59C6"/></svg>
+        </a>
+        <a href="https://www.sobonix.com/services/ui-ux-design-frontend-development-company" class="nav-link group">
+          <div class="whitespace-nowrap w-max flex items-center gap-2">
+            <span class="w-7 h-7 rounded-[3px] bg-default-light-blue flex items-center justify-center"><img src="{{asset 'images/theme/icons/measure.svg'}}" alt="UX and UI design services icon" width="15" height="15.63" loading="lazy" /></span>
+            <span>UX/UI Design &amp; Development</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon icon-outward" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M11.2503 0.625V8.75C11.2503 8.91576 11.1845 9.07473 11.0673 9.19194C10.9501 9.30915 10.7911 9.375 10.6253 9.375C10.4596 9.375 10.3006 9.30915 10.1834 9.19194C10.0662 9.07473 10.0003 8.91576 10.0003 8.75V2.13359L1.06754 11.0672C0.95026 11.1845 0.7912 11.2503 0.625347 11.2503C0.459495 11.2503 0.300435 11.1845 0.18316 11.0672C0.0658846 10.9499 0 10.7909 0 10.625C0 10.4591 0.0658846 10.3001 0.18316 10.1828L9.11675 1.25H2.50035C2.33459 1.25 2.17562 1.18415 2.05841 1.06694C1.9412 0.949731 1.87535 0.79076 1.87535 0.625C1.87535 0.45924 1.9412 0.300269 2.05841 0.183058C2.17562 0.0658481 2.33459 0 2.50035 0H10.6253C10.7911 0 10.9501 0.0658481 11.0673 0.183058C11.1845 0.300269 11.2503 0.45924 11.2503 0.625Z" fill="#0F59C6"/></svg>
+        </a>
+        <a href="https://www.sobonix.com/services/cloud-microservices-architecture-company" class="nav-link group">
+          <div class="whitespace-nowrap w-max flex items-center gap-2">
+            <span class="w-7 h-7 rounded-[3px] bg-default-light-blue flex items-center justify-center"><img src="{{asset 'images/theme/icons/cloud.svg'}}" alt="Cloud microservices architecture icon" width="18.75" height="13.75" loading="lazy" /></span>
+            <span>Cloud Microservices Development</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon icon-outward" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M11.2503 0.625V8.75C11.2503 8.91576 11.1845 9.07473 11.0673 9.19194C10.9501 9.30915 10.7911 9.375 10.6253 9.375C10.4596 9.375 10.3006 9.30915 10.1834 9.19194C10.0662 9.07473 10.0003 8.91576 10.0003 8.75V2.13359L1.06754 11.0672C0.95026 11.1845 0.7912 11.2503 0.625347 11.2503C0.459495 11.2503 0.300435 11.1845 0.18316 11.0672C0.0658846 10.9499 0 10.7909 0 10.625C0 10.4591 0.0658846 10.3001 0.18316 10.1828L9.11675 1.25H2.50035C2.33459 1.25 2.17562 1.18415 2.05841 1.06694C1.9412 0.949731 1.87535 0.79076 1.87535 0.625C1.87535 0.45924 1.9412 0.300269 2.05841 0.183058C2.17562 0.0658481 2.33459 0 2.50035 0H10.6253C10.7911 0 10.9501 0.0658481 11.0673 0.183058C11.1845 0.300269 11.2503 0.45924 11.2503 0.625Z" fill="#0F59C6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="relative transition duration-200 ease-in-out">
+      <button type="button" class="nav-el p-4 lg:p-0 hover:cursor-pointer flex items-center justify-between w-full lg:w-auto gap-4 text-20m text-default-blue lg:text-default-black hover:text-default-blue transition duration-200 ease-in-out">
+        Industries
+        <svg xmlns="http://www.w3.org/2000/svg" class="material-symbols-rounded icon-chevron transition duration-200 !text-[26px] ease-in-out" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.5326 6.52927L8.53255 11.5293C8.46287 11.5992 8.38008 11.6547 8.28892 11.6925C8.19775 11.7304 8.10001 11.7499 8.0013 11.7499C7.90259 11.7499 7.80485 11.7304 7.71369 11.6925C7.62252 11.6547 7.53973 11.5992 7.47005 11.5293L2.47005 6.52927C2.32915 6.38837 2.25 6.19728 2.25 5.99802C2.25 5.79876 2.32915 5.60767 2.47005 5.46677C2.61095 5.32587 2.80204 5.24672 3.0013 5.24672C3.20056 5.24672 3.39165 5.32587 3.53255 5.46677L8.00193 9.93614L12.4713 5.46615C12.6122 5.32525 12.8033 5.24609 13.0026 5.24609C13.2018 5.24609 13.3929 5.32525 13.5338 5.46615C13.6747 5.60704 13.7539 5.79814 13.7539 5.9974C13.7539 6.19665 13.6747 6.38775 13.5338 6.52865L13.5326 6.52927Z" fill="#1C2024"/></svg>
+      </button>
+      <div class="overflow-y-hidden w-[95%] lg:w-auto mx-auto max-h-[0px] lg:max-h-none transition ease-in-out duration-300 lg:!block lg:absolute top-[56px] lg:-translate-x-1/2 lg:left-1/2 lg:p-4 bg-default-white rounded-lg z-10 shadow-[0_1px_2px_rgba(0,0,0,0.24),0_1px_3px_rgba(0,0,0,0.12)] opacity-0 pointer-events-none scale-95 transition-all duration-200 ease-in-out">
+        <a href="https://www.sobonix.com/industries/ecommerce-online-retail" class="nav-link group">
+          <div class="whitespace-nowrap w-max flex items-center gap-2">
+            <span class="w-7 h-7 rounded-[3px] bg-default-light-blue flex items-center justify-center"><img src="{{asset 'images/theme/icons/cart.svg'}}" alt="E-commerce and online retail industry icon" width="16.8" height="16.9" loading="lazy" /></span>
+            <span>Ecommerce Online Retail</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon icon-outward" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M11.2503 0.625V8.75C11.2503 8.91576 11.1845 9.07473 11.0673 9.19194C10.9501 9.30915 10.7911 9.375 10.6253 9.375C10.4596 9.375 10.3006 9.30915 10.1834 9.19194C10.0662 9.07473 10.0003 8.91576 10.0003 8.75V2.13359L1.06754 11.0672C0.95026 11.1845 0.7912 11.2503 0.625347 11.2503C0.459495 11.2503 0.300435 11.1845 0.18316 11.0672C0.0658846 10.9499 0 10.7909 0 10.625C0 10.4591 0.0658846 10.3001 0.18316 10.1828L9.11675 1.25H2.50035C2.33459 1.25 2.17562 1.18415 2.05841 1.06694C1.9412 0.949731 1.87535 0.79076 1.87535 0.625C1.87535 0.45924 1.9412 0.300269 2.05841 0.183058C2.17562 0.0658481 2.33459 0 2.50035 0H10.6253C10.7911 0 10.9501 0.0658481 11.0673 0.183058C11.1845 0.300269 11.2503 0.45924 11.2503 0.625Z" fill="#0F59C6"/></svg>
+        </a>
+        <a href="https://www.sobonix.com/industries/edtech-online-learning" class="nav-link group">
+          <div class="whitespace-nowrap w-max flex items-center gap-2">
+            <span class="w-7 h-7 rounded-[3px] bg-default-light-blue flex items-center justify-center"><img src="{{asset 'images/theme/icons/book.svg'}}" alt="Edtech and online learning industry icon" width="13.75" height="16.25" loading="lazy" /></span>
+            <span>Edtech Online Learning</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon icon-outward" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M11.2503 0.625V8.75C11.2503 8.91576 11.1845 9.07473 11.0673 9.19194C10.9501 9.30915 10.7911 9.375 10.6253 9.375C10.4596 9.375 10.3006 9.30915 10.1834 9.19194C10.0662 9.07473 10.0003 8.91576 10.0003 8.75V2.13359L1.06754 11.0672C0.95026 11.1845 0.7912 11.2503 0.625347 11.2503C0.459495 11.2503 0.300435 11.1845 0.18316 11.0672C0.0658846 10.9499 0 10.7909 0 10.625C0 10.4591 0.0658846 10.3001 0.18316 10.1828L9.11675 1.25H2.50035C2.33459 1.25 2.17562 1.18415 2.05841 1.06694C1.9412 0.949731 1.87535 0.79076 1.87535 0.625C1.87535 0.45924 1.9412 0.300269 2.05841 0.183058C2.17562 0.0658481 2.33459 0 2.50035 0H10.6253C10.7911 0 10.9501 0.0658481 11.0673 0.183058C11.1845 0.300269 11.2503 0.45924 11.2503 0.625Z" fill="#0F59C6"/></svg>
+        </a>
+        <a href="https://www.sobonix.com/industries/healthcare-medtech" class="nav-link group">
+          <div class="whitespace-nowrap w-max flex items-center gap-2">
+            <span class="w-7 h-7 rounded-[3px] bg-default-light-blue flex items-center justify-center"><img src="{{asset 'images/theme/icons/stethescope.svg'}}" alt="Healthcare and medtech industry icon" width="16.25" height="16.25" loading="lazy" /></span>
+            <span>Healthcare Medtech</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon icon-outward" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M11.2503 0.625V8.75C11.2503 8.91576 11.1845 9.07473 11.0673 9.19194C10.9501 9.30915 10.7911 9.375 10.6253 9.375C10.4596 9.375 10.3006 9.30915 10.1834 9.19194C10.0662 9.07473 10.0003 8.91576 10.0003 8.75V2.13359L1.06754 11.0672C0.95026 11.1845 0.7912 11.2503 0.625347 11.2503C0.459495 11.2503 0.300435 11.1845 0.18316 11.0672C0.0658846 10.9499 0 10.7909 0 10.625C0 10.4591 0.0658846 10.3001 0.18316 10.1828L9.11675 1.25H2.50035C2.33459 1.25 2.17562 1.18415 2.05841 1.06694C1.9412 0.949731 1.87535 0.79076 1.87535 0.625C1.87535 0.45924 1.9412 0.300269 2.05841 0.183058C2.17562 0.0658481 2.33459 0 2.50035 0H10.6253C10.7911 0 10.9501 0.0658481 11.0673 0.183058C11.1845 0.300269 11.2503 0.45924 11.2503 0.625Z" fill="#0F59C6"/></svg>
+        </a>
+        <a href="https://www.sobonix.com/industries/proptech-real-estate-solutions" class="nav-link group">
+          <div class="whitespace-nowrap w-max flex items-center gap-2">
+            <span class="w-7 h-7 rounded-[3px] bg-default-light-blue flex items-center justify-center"><img src="{{asset 'images/theme/icons/building.svg'}}" alt="Proptech and real estate solutions icon" width="17.5" height="17.5" loading="lazy" /></span>
+            <span>Proptech Realestate Solutions</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon icon-outward" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M11.2503 0.625V8.75C11.2503 8.91576 11.1845 9.07473 11.0673 9.19194C10.9501 9.30915 10.7911 9.375 10.6253 9.375C10.4596 9.375 10.3006 9.30915 10.1834 9.19194C10.0662 9.07473 10.0003 8.91576 10.0003 8.75V2.13359L1.06754 11.0672C0.95026 11.1845 0.7912 11.2503 0.625347 11.2503C0.459495 11.2503 0.300435 11.1845 0.18316 11.0672C0.0658846 10.9499 0 10.7909 0 10.625C0 10.4591 0.0658846 10.3001 0.18316 10.1828L9.11675 1.25H2.50035C2.33459 1.25 2.17562 1.18415 2.05841 1.06694C1.9412 0.949731 1.87535 0.79076 1.87535 0.625C1.87535 0.45924 1.9412 0.300269 2.05841 0.183058C2.17562 0.0658481 2.33459 0 2.50035 0H10.6253C10.7911 0 10.9501 0.0658481 11.0673 0.183058C11.1845 0.300269 11.2503 0.45924 11.2503 0.625Z" fill="#0F59C6"/></svg>
+        </a>
+        <a href="https://www.sobonix.com/industries/beauty-wellness-lifestyle" class="nav-link group">
+          <div class="whitespace-nowrap w-max flex items-center gap-2">
+            <span class="w-7 h-7 rounded-[3px] bg-default-light-blue flex items-center justify-center"><img src="{{asset 'images/theme/icons/lotus.svg'}}" alt="Beauty wellness and lifestyle industry icon" width="18.75" height="13.75" loading="lazy" /></span>
+            <span>Beauty Wellness Lifestyle</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon icon-outward" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M11.2503 0.625V8.75C11.2503 8.91576 11.1845 9.07473 11.0673 9.19194C10.9501 9.30915 10.7911 9.375 10.6253 9.375C10.4596 9.375 10.3006 9.30915 10.1834 9.19194C10.0662 9.07473 10.0003 8.91576 10.0003 8.75V2.13359L1.06754 11.0672C0.95026 11.1845 0.7912 11.2503 0.625347 11.2503C0.459495 11.2503 0.300435 11.1845 0.18316 11.0672C0.0658846 10.9499 0 10.7909 0 10.625C0 10.4591 0.0658846 10.3001 0.18316 10.1828L9.11675 1.25H2.50035C2.33459 1.25 2.17562 1.18415 2.05841 1.06694C1.9412 0.949731 1.87535 0.79076 1.87535 0.625C1.87535 0.45924 1.9412 0.300269 2.05841 0.183058C2.17562 0.0658481 2.33459 0 2.50035 0H10.6253C10.7911 0 10.9501 0.0658481 11.0673 0.183058C11.1845 0.300269 11.2503 0.45924 11.2503 0.625Z" fill="#0F59C6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <a href="https://www.sobonix.com/case-studies" class="block text-20m p-4 lg:p-0 hover:cursor-pointer hover:text-default-blue transition text-default-blue lg:text-default-black duration-200 ease-in-out">
+      Case Studies
+    </a>
+
+    <div class="relative transition duration-200 ease-in-out">
+      <button type="button" class="nav-el p-4 lg:p-0 hover:cursor-pointer flex items-center justify-between w-full lg:w-auto gap-4 text-20m text-default-blue lg:text-default-black hover:text-default-blue transition duration-200 ease-in-out">
+        Company
+        <svg xmlns="http://www.w3.org/2000/svg" class="material-symbols-rounded icon-chevron transition duration-200 !text-[26px] ease-in-out" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.5326 6.52927L8.53255 11.5293C8.46287 11.5992 8.38008 11.6547 8.28892 11.6925C8.19775 11.7304 8.10001 11.7499 8.0013 11.7499C7.90259 11.7499 7.80485 11.7304 7.71369 11.6925C7.62252 11.6547 7.53973 11.5992 7.47005 11.5293L2.47005 6.52927C2.32915 6.38837 2.25 6.19728 2.25 5.99802C2.25 5.79876 2.32915 5.60767 2.47005 5.46677C2.61095 5.32587 2.80204 5.24672 3.0013 5.24672C3.20056 5.24672 3.39165 5.32587 3.53255 5.46677L8.00193 9.93614L12.4713 5.46615C12.6122 5.32525 12.8033 5.24609 13.0026 5.24609C13.2018 5.24609 13.3929 5.32525 13.5338 5.46615C13.6747 5.60704 13.7539 5.79814 13.7539 5.9974C13.7539 6.19665 13.6747 6.38775 13.5338 6.52865L13.5326 6.52927Z" fill="#1C2024"/></svg>
+      </button>
+      <div class="overflow-y-hidden w-[95%] lg:w-auto mx-auto max-h-[0px] lg:max-h-none transition ease-in-out duration-300 lg:!block lg:absolute top-[56px] lg:-translate-x-1/2 lg:left-1/2 lg:p-4 bg-default-white rounded-lg z-10 shadow-[0_1px_2px_rgba(0,0,0,0.24),0_1px_3px_rgba(0,0,0,0.12)] opacity-0 pointer-events-none scale-95 transition-all duration-200 ease-in-out">
+        <a href="https://www.sobonix.com/our-process" class="nav-link group">
+          <div class="whitespace-nowrap w-max flex items-center gap-2">
+            <span class="w-7 h-7 rounded-[3px] bg-default-light-blue flex items-center justify-center"><img src="{{asset 'images/theme/icons/analytics.svg'}}" alt="Company workflow and process icon" width="18.75" height="16.25" loading="lazy" /></span>
+            <span>Our Process</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon icon-outward" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M11.2503 0.625V8.75C11.2503 8.91576 11.1845 9.07473 11.0673 9.19194C10.9501 9.30915 10.7911 9.375 10.6253 9.375C10.4596 9.375 10.3006 9.30915 10.1834 9.19194C10.0662 9.07473 10.0003 8.91576 10.0003 8.75V2.13359L1.06754 11.0672C0.95026 11.1845 0.7912 11.2503 0.625347 11.2503C0.459495 11.2503 0.300435 11.1845 0.18316 11.0672C0.0658846 10.9499 0 10.7909 0 10.625C0 10.4591 0.0658846 10.3001 0.18316 10.1828L9.11675 1.25H2.50035C2.33459 1.25 2.17562 1.18415 2.05841 1.06694C1.9412 0.949731 1.87535 0.79076 1.87535 0.625C1.87535 0.45924 1.9412 0.300269 2.05841 0.183058C2.17562 0.0658481 2.33459 0 2.50035 0H10.6253C10.7911 0 10.9501 0.0658481 11.0673 0.183058C11.1845 0.300269 11.2503 0.45924 11.2503 0.625Z" fill="#0F59C6"/></svg>
+        </a>
+        <a href="https://www.sobonix.com/about-us" class="nav-link group">
+          <div class="whitespace-nowrap w-max flex items-center gap-2">
+            <span class="w-7 h-7 rounded-[3px] bg-default-light-blue flex items-center justify-center"><img src="{{asset 'images/theme/icons/peace.svg'}}" alt="About the company icon" width="13.2" height="17.6" loading="lazy" /></span>
+            <span>About Us</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon icon-outward" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M11.2503 0.625V8.75C11.2503 8.91576 11.1845 9.07473 11.0673 9.19194C10.9501 9.30915 10.7911 9.375 10.6253 9.375C10.4596 9.375 10.3006 9.30915 10.1834 9.19194C10.0662 9.07473 10.0003 8.91576 10.0003 8.75V2.13359L1.06754 11.0672C0.95026 11.1845 0.7912 11.2503 0.625347 11.2503C0.459495 11.2503 0.300435 11.1845 0.18316 11.0672C0.0658846 10.9499 0 10.7909 0 10.625C0 10.4591 0.0658846 10.3001 0.18316 10.1828L9.11675 1.25H2.50035C2.33459 1.25 2.17562 1.18415 2.05841 1.06694C1.9412 0.949731 1.87535 0.79076 1.87535 0.625C1.87535 0.45924 1.9412 0.300269 2.05841 0.183058C2.17562 0.0658481 2.33459 0 2.50035 0H10.6253C10.7911 0 10.9501 0.0658481 11.0673 0.183058C11.1845 0.300269 11.2503 0.45924 11.2503 0.625Z" fill="#0F59C6"/></svg>
+        </a>
+        <a href="https://www.sobonix.com/career" class="nav-link group">
+          <div class="whitespace-nowrap w-max flex items-center gap-2">
+            <span class="w-7 h-7 rounded-[3px] bg-default-light-blue flex items-center justify-center"><img src="{{asset 'images/theme/icons/people.svg'}}" alt="Careers and job opportunities icon" width="19.6" height="12.5" loading="lazy" /></span>
+            <span>Career</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon icon-outward" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M11.2503 0.625V8.75C11.2503 8.91576 11.1845 9.07473 11.0673 9.19194C10.9501 9.30915 10.7911 9.375 10.6253 9.375C10.4596 9.375 10.3006 9.30915 10.1834 9.19194C10.0662 9.07473 10.0003 8.91576 10.0003 8.75V2.13359L1.06754 11.0672C0.95026 11.1845 0.7912 11.2503 0.625347 11.2503C0.459495 11.2503 0.300435 11.1845 0.18316 11.0672C0.0658846 10.9499 0 10.7909 0 10.625C0 10.4591 0.0658846 10.3001 0.18316 10.1828L9.11675 1.25H2.50035C2.33459 1.25 2.17562 1.18415 2.05841 1.06694C1.9412 0.949731 1.87535 0.79076 1.87535 0.625C1.87535 0.45924 1.9412 0.300269 2.05841 0.183058C2.17562 0.0658481 2.33459 0 2.50035 0H10.6253C10.7911 0 10.9501 0.0658481 11.0673 0.183058C11.1845 0.300269 11.2503 0.45924 11.2503 0.625Z" fill="#0F59C6"/></svg>
+        </a>
+        <a href="https://www.sobonix.com/media-kit" class="nav-link group">
+          <div class="whitespace-nowrap w-max flex items-center gap-2">
+            <span class="w-7 h-7 rounded-[3px] bg-default-light-blue flex items-center justify-center"><img src="{{asset 'images/theme/icons/note.svg'}}" alt="Company media and brand assets icon" width="15" height="17.5" loading="lazy" /></span>
+            <span>Media Kit</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon icon-outward" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M11.2503 0.625V8.75C11.2503 8.91576 11.1845 9.07473 11.0673 9.19194C10.9501 9.30915 10.7911 9.375 10.6253 9.375C10.4596 9.375 10.3006 9.30915 10.1834 9.19194C10.0662 9.07473 10.0003 8.91576 10.0003 8.75V2.13359L1.06754 11.0672C0.95026 11.1845 0.7912 11.2503 0.625347 11.2503C0.459495 11.2503 0.300435 11.1845 0.18316 11.0672C0.0658846 10.9499 0 10.7909 0 10.625C0 10.4591 0.0658846 10.3001 0.18316 10.1828L9.11675 1.25H2.50035C2.33459 1.25 2.17562 1.18415 2.05841 1.06694C1.9412 0.949731 1.87535 0.79076 1.87535 0.625C1.87535 0.45924 1.9412 0.300269 2.05841 0.183058C2.17562 0.0658481 2.33459 0 2.50035 0H10.6253C10.7911 0 10.9501 0.0658481 11.0673 0.183058C11.1845 0.300269 11.2503 0.45924 11.2503 0.625Z" fill="#0F59C6"/></svg>
+        </a>
+        <a href="https://www.sobonix.com/blog" class="nav-link group">
+          <div class="whitespace-nowrap w-max flex items-center gap-2">
+            <span class="w-7 h-7 rounded-[3px] bg-default-light-blue flex items-center justify-center"><img src="{{asset 'images/theme/icons/book.svg'}}" alt="Company blog icon" width="13.75" height="16.25" loading="lazy" /></span>
+            <span>Blogs</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon icon-outward" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M11.2503 0.625V8.75C11.2503 8.91576 11.1845 9.07473 11.0673 9.19194C10.9501 9.30915 10.7911 9.375 10.6253 9.375C10.4596 9.375 10.3006 9.30915 10.1834 9.19194C10.0662 9.07473 10.0003 8.91576 10.0003 8.75V2.13359L1.06754 11.0672C0.95026 11.1845 0.7912 11.2503 0.625347 11.2503C0.459495 11.2503 0.300435 11.1845 0.18316 11.0672C0.0658846 10.9499 0 10.7909 0 10.625C0 10.4591 0.0658846 10.3001 0.18316 10.1828L9.11675 1.25H2.50035C2.33459 1.25 2.17562 1.18415 2.05841 1.06694C1.9412 0.949731 1.87535 0.79076 1.87535 0.625C1.87535 0.45924 1.9412 0.300269 2.05841 0.183058C2.17562 0.0658481 2.33459 0 2.50035 0H10.6253C10.7911 0 10.9501 0.0658481 11.0673 0.183058C11.1845 0.300269 11.2503 0.45924 11.2503 0.625Z" fill="#0F59C6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <a href="https://www.sobonix.com/contact-us" class="btn-contact lg:!hidden text-20r absolute -translate-x-1/2 left-1/2 bottom-[88px] w-[calc(100%-48px)]">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon-call !text-lg" width="19" height="19" viewBox="0 0 19 19" fill="none" aria-hidden="true"><path d="M17.8472 12.6054L13.4306 10.6264L13.4184 10.6207C13.1892 10.5227 12.939 10.4833 12.6907 10.5062C12.4424 10.5292 12.2037 10.6136 11.9963 10.752C11.9718 10.7681 11.9484 10.7857 11.9259 10.8045L9.64407 12.7498C8.19845 12.0476 6.70595 10.5664 6.00376 9.1395L7.95188 6.82294C7.97063 6.7995 7.98845 6.77606 8.00532 6.75075C8.14072 6.54384 8.22287 6.30667 8.24446 6.06035C8.26606 5.81402 8.22641 5.56618 8.12907 5.33887V5.32762L6.14438 0.90356C6.0157 0.606621 5.79444 0.359262 5.51362 0.198409C5.2328 0.0375558 4.9075 -0.0281638 4.58626 0.0110603C3.31592 0.178223 2.14986 0.802093 1.30588 1.76615C0.461903 2.73021 -0.00228837 3.96852 8.4831e-06 5.24981C8.4831e-06 12.6936 6.05626 18.7498 13.5 18.7498C14.7813 18.7521 16.0196 18.2879 16.9837 17.4439C17.9477 16.6 18.5716 15.4339 18.7388 14.1636C18.7781 13.8424 18.7125 13.5172 18.5518 13.2364C18.3911 12.9556 18.144 12.7343 17.8472 12.6054ZM13.5 17.2498C10.3185 17.2463 7.26825 15.9809 5.01856 13.7313C2.76888 11.4816 1.50348 8.43134 1.50001 5.24981C1.49648 4.33433 1.82631 3.44887 2.42789 2.75879C3.02947 2.0687 3.86167 1.62118 4.76907 1.49981C4.7687 1.50355 4.7687 1.50732 4.76907 1.51106L6.73782 5.91731L4.80001 8.23669C4.78034 8.25932 4.76247 8.28345 4.74657 8.30887C4.60549 8.52536 4.52273 8.77462 4.5063 9.03249C4.48988 9.29037 4.54035 9.54811 4.65282 9.78075C5.5022 11.5179 7.25251 13.2551 9.00845 14.1036C9.24279 14.215 9.50203 14.2637 9.76083 14.245C10.0196 14.2262 10.2692 14.1407 10.485 13.9967C10.5091 13.9805 10.5322 13.9629 10.5544 13.9442L12.8334 11.9998L17.2397 13.9732C17.2397 13.9732 17.2472 13.9732 17.25 13.9732C17.1301 14.8819 16.6833 15.7158 15.9931 16.3189C15.3028 16.922 14.4166 17.2529 13.5 17.2498Z" fill="white"/></svg>
+      Contact Us
+    </a>
+  </nav>
+
+  <a href="https://www.sobonix.com/contact-us" class="!hidden lg:!flex btn-contact text-20r">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon-call !text-lg" width="19" height="19" viewBox="0 0 19 19" fill="none" aria-hidden="true"><path d="M17.8472 12.6054L13.4306 10.6264L13.4184 10.6207C13.1892 10.5227 12.939 10.4833 12.6907 10.5062C12.4424 10.5292 12.2037 10.6136 11.9963 10.752C11.9718 10.7681 11.9484 10.7857 11.9259 10.8045L9.64407 12.7498C8.19845 12.0476 6.70595 10.5664 6.00376 9.1395L7.95188 6.82294C7.97063 6.7995 7.98845 6.77606 8.00532 6.75075C8.14072 6.54384 8.22287 6.30667 8.24446 6.06035C8.26606 5.81402 8.22641 5.56618 8.12907 5.33887V5.32762L6.14438 0.90356C6.0157 0.606621 5.79444 0.359262 5.51362 0.198409C5.2328 0.0375558 4.9075 -0.0281638 4.58626 0.0110603C3.31592 0.178223 2.14986 0.802093 1.30588 1.76615C0.461903 2.73021 -0.00228837 3.96852 8.4831e-06 5.24981C8.4831e-06 12.6936 6.05626 18.7498 13.5 18.7498C14.7813 18.7521 16.0196 18.2879 16.9837 17.4439C17.9477 16.6 18.5716 15.4339 18.7388 14.1636C18.7781 13.8424 18.7125 13.5172 18.5518 13.2364C18.3911 12.9556 18.144 12.7343 17.8472 12.6054ZM13.5 17.2498C10.3185 17.2463 7.26825 15.9809 5.01856 13.7313C2.76888 11.4816 1.50348 8.43134 1.50001 5.24981C1.49648 4.33433 1.82631 3.44887 2.42789 2.75879C3.02947 2.0687 3.86167 1.62118 4.76907 1.49981C4.7687 1.50355 4.7687 1.50732 4.76907 1.51106L6.73782 5.91731L4.80001 8.23669C4.78034 8.25932 4.76247 8.28345 4.74657 8.30887C4.60549 8.52536 4.52273 8.77462 4.5063 9.03249C4.48988 9.29037 4.54035 9.54811 4.65282 9.78075C5.5022 11.5179 7.25251 13.2551 9.00845 14.1036C9.24279 14.215 9.50203 14.2637 9.76083 14.245C10.0196 14.2262 10.2692 14.1407 10.485 13.9967C10.5091 13.9805 10.5322 13.9629 10.5544 13.9442L12.8334 11.9998L17.2397 13.9732C17.2397 13.9732 17.2472 13.9732 17.25 13.9732C17.1301 14.8819 16.6833 15.7158 15.9931 16.3189C15.3028 16.922 14.4166 17.2529 13.5 17.2498Z" fill="white"/></svg>
+    Contact Us
+  </a>
+</div>
