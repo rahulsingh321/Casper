@@ -27,7 +27,7 @@
 <div class="viewport">
 
     {{> "theme/header"}}
-    <div class="site-content sobonix-content">
+    <div class="site-content">
         {{!-- All other templates get inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
     </div>
@@ -51,10 +51,6 @@
 <script src="{{asset "built/casper.js"}}"></script>
 <script>
 $(document).ready(function () {
-    // Mobile Menu Trigger
-    $('.gh-burger').click(function () {
-        $('body').toggleClass('gh-head-open');
-    });
     // FitVids - Makes video embeds responsive
     $(".gh-content").fitVids();
 });

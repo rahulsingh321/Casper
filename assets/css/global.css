@@ -271,7 +271,7 @@ html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-    color: var(--color-darkgrey);
+    color: var(#1c2024);
     font-family: var(--gh-font-body, var(--font-sans));
     font-size: 1.6rem;
     line-height: 1.6em;
